@@ -3,14 +3,30 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ComponentsModule } from './components/components.module';
+import { HttpClientModule } from '@angular/common/http'
+import { HomeComponent } from './page/home/home.component';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api'
+import { InMemoryDataService } from './mock/InMemoryDataService';
+import { PageComponent } from './page/page.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 
 @NgModule({
   declarations: [
     AppComponent
+    //,
+    //PageComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    //environment.production === false ?
+    //HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { delay : 100 }):
+    //[]
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { delay : 100 }),
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
