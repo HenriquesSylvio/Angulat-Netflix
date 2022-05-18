@@ -1,6 +1,7 @@
 import { InMemoryDbService } from "angular-in-memory-web-api";
 import { Observable } from "rxjs";
 import { Movie } from "../models/movie";
+import { User } from "../models/user";
 
 
 export class InMemoryDataService implements InMemoryDbService {
@@ -196,7 +197,10 @@ export class InMemoryDataService implements InMemoryDbService {
             'Revoir',
             'Drames'
         ];
-
-        return { movies, categories };
+        const users: User[] = [{
+          login: "test@test",
+          password: "333"
+        }]
+        return { movies, categories, users };
     }
 }
