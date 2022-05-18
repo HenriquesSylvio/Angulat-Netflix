@@ -1,5 +1,15 @@
-<form>
-  <input type="email"/>
-  <input type="password"/>
-  <button type="submit">Valider</button>
+<form [formGroup]="formGroup">
+  <div>
+    <input formControlName="email" type="email"/>
+  </div>
+  <div>
+    <input formControlName="password" type="password"/>
+    <div *ngIf="formGroup.get('password')?.hasError('minlength')">
+      {{ 'Ce champ doit contenir au moins 3 caractère' }}
+    </div>
+    <div *ngIf="formGroup.get('password')?.hasError('minlength')">
+      {{ 'Ce champ doit contenir au moins 3 caractère' }}
+    </div>
+  </div>
+  <button [disabled]="formGroup.invalid" type="submit">Valider</button>
 </form>
