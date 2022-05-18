@@ -10,11 +10,15 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api'
 import { InMemoryDataService } from './mock/InMemoryDataService';
 import { PageComponent } from './page/page.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SearchComponent } from './page/search/search.component';
+import { AuthComponent } from './auth/auth.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AuthComponent,
+    //SearchComponent
     //,
     //PageComponent
   ],

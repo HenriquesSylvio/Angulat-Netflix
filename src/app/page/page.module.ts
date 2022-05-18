@@ -8,6 +8,7 @@ import { SlideComponent } from './home/slide/slide.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { PageComponent } from './page.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SearchComponent } from './search/search.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     HomeComponent,
     SlideComponent,
     SearchBarComponent,
-    PageComponent
+    PageComponent,
+    SearchComponent
   ],
   imports: [
     CommonModule,

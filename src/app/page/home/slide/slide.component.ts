@@ -51,7 +51,7 @@ export class SlideComponent implements OnInit , OnDestroy{
       this._movieService.GetMovies(this.category).subscribe(
         (movies) => {
           this.movies = movies;
-          this.slideMaximum = ((this.slideElement + this.slideMarginWidth) * this.movies.length - this.slideMarginWidth) - window.innerWidth;
+          this.slideMaximum = (((this.slideElement + this.slideMarginWidth) * this.movies.length) - this.slideMarginWidth) - window.innerWidth;
         }
       );
     }
